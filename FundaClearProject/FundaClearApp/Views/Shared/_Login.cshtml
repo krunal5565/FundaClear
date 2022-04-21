@@ -1,0 +1,42 @@
+﻿@model Loyalty.DTO.CustomerDTO
+
+<div class="col-sm-12 shadow-lg p-5 bg-light">
+    <div class="text-center">
+        <h3 class="text-primary">Signin</h3>
+    </div>
+    <div class="p-4">
+        @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+        {
+        <div style=" color: red; float: left">
+            @TempData["ErrorMessage"]
+            <div style=" color: green; float: left">
+                @TempData["SuccessMessage"]
+            </div>
+        </div> 
+
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-primary">
+                    <i class="bi bi-person-plus-fill text-white"></i>
+                </span>
+                @Html.EditorFor(model => model.LoginId, new { htmlAttributes = new { @title = "User Name", @Placeholder = "Username", @class = "form-control" } })
+
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-primary">
+                    <i class="bi bi-phone text-white"></i>
+                </span>
+                @Html.PasswordFor(model => model.PassKey, new { @class = "form-control", @Placeholder = "Password", htmlAttributes = new { @title = "Password" } })
+            </div>
+
+            <div class="d-grid col-12 mx-auto">
+                <button class="btn btn-primary" type="submit" id="post"><span></span> Sign In</button>
+            </div>
+            <p class="text-center mt-3">
+                Need to create account?
+                <span class="text-primary"><a href ="@Url.Action("Signup", "Home")">Sign Up</a></span>
+            </p>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M8wAShN7vdBhBTP5SMOrpHC_Bz5suBd1ZeCO_3JZvDle-cIbDphMtekV2kaKEGSnfLrEjzV3bhg1X6xiOfLR4iDfTFeV26qLiI-pBOG1sVFG5Nrfl0PCCOO9v5tNKSv2IrOaqtRWqRAZBipRwLVurs">
+        }
+    </div>
+</div>

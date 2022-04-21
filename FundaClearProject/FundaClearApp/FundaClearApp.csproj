@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grid.Mvc" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Loyalty.DataLayer">
+      <HintPath>..\LoyaltyDLL\Loyalty.DataLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyalty.DTO">
+      <HintPath>..\LoyaltyDLL\Loyalty.DTO.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyalty.ServiceLibrary">
+      <HintPath>..\LoyaltyDLL\Loyalty.ServiceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyalty.Shared">
+      <HintPath>..\LoyaltyDLL\Loyalty.Shared.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

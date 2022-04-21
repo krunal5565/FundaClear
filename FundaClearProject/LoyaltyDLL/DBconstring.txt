@@ -1,0 +1,5 @@
+server: 164.52.195.234
+
+Userid: Loyalty_dev
+Database: Loyalty_dev
+Passowrd: Dell@2022

@@ -1,0 +1,68 @@
+﻿@model List<Loyalty.DTO.CustomerDTO>
+@{
+    ViewBag.Title = "Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding: 30px;">
+    <h2>Customers</h2>
+    <hr />
+    <div style="width:100%; height:30px">
+        <a href="@Url.Action("Add", "Customer")" style="float:right;  background-color: #2e4b90;" class="btn btn-primary btn-sm active" role="button">
+            + Add New Customer
+        </a>
+    </div>
+    <hr />
+
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Mobile Number</th>
+                    <th>Email </th>
+                    <th>Address</th>
+                    <th>Balance Point</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <th scope="row">@item.CustomerName</th>
+                    <td>@item.MobileNumber</td>
+                    <td>@item.EmailId</td>
+                    <td>@item.Address</td>
+                    <td>@item.BalancePoint</td>
+                    <td>
+                        <a id="btnEdit" href="/customer/edit?id=@item.CustomerId">Edit</a>
+
+                        &nbsp;
+                        <a href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete" class="btnDelete">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<script>
+   
+    function DeleteCustomer(id)
+    {
+        $.ajax({
+            type: "POST",
+            url: "/Customer/Delete?id=" + id,
+            success: function (data) {
+                if (data == true) {
+                    window.location.reload();
+                }
+                else {
+                    alert("Something failed");
+                }
+            }
+        });
+    }
+
+</script>

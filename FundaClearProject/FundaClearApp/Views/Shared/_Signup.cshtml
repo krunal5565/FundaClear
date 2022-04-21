@@ -1,0 +1,72 @@
+﻿@model Loyalty.DTO.TenantDTO
+
+<div class="col-sm-12 shadow-lg bg-light" style="padding:10px;">
+    <div class="text-center">
+        <h3 class="text-primary">Signup</h3>
+    </div>
+    <div class="">
+
+
+
+        @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+        {
+            <div style=" color: red; float: left">
+                @TempData["ErrorMessage"]
+            </div>
+
+            <div style=" color: green; float: left">
+                @TempData["SuccessMessage"]
+            </div>
+            <br />
+
+            <div class="row gy-4" style="margin:5px">
+                <div class="col-md-6">
+
+                    @Html.EditorFor(model => model.LoginId, new { htmlAttributes = new { @title = "Username", @Placeholder = "Username", @class = "form-control" } })
+                </div>
+                <div class="col-md-6">
+                    @Html.PasswordFor(model => model.PassKey, new { @title = "Password", @Placeholder = "Password", @class = "form-control" })
+                </div>
+            </div>
+            <div class="row gy-4" style="margin:5px">
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @title = "Mobile Number", @Placeholder = "Mobile Number", @class = "form-control" } })
+                </div>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @title = "Email", @Placeholder = "Email", @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="row gy-4" style="margin:5px">
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @title = "Address", @Placeholder = "Address", @class = "form-control" } })
+                </div>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.Locality, new { htmlAttributes = new { @title = "Locality", @Placeholder = "Locality", @class = "form-control" } })
+                </div>
+            </div>
+
+            <div class="row gy-4" style="margin:5px">
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.ContactPerson, new { htmlAttributes = new { @title = "Contact Person", @Placeholder = "Contact Person", @class = "form-control" } })
+                </div>
+                <div class="col-md-6">
+                    @Html.EditorFor(model => model.TenantName, new { htmlAttributes = new { @title = "TenantName", @Placeholder = "TenantName", @class = "form-control" } })
+                </div>
+            </div>
+
+
+            <div class="d-grid col-6 mx-auto" style="margin:5px">
+                <br />
+                <button class="btn btn-primary" type="submit" id="post"><span></span> Sign Up</button>
+            </div>
+            <p class="text-center mt-3">
+                Already have an account ?
+                <span class="text-primary"> <a href="@Url.Action("index", "Home")">Login </a></span>
+            </p>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M8wAShN7vdBhBTP5SMOrpHC_Bz5suBd1ZeCO_3JZvDle-cIbDphMtekV2kaKEGSnfLrEjzV3bhg1X6xiOfLR4iDfTFeV26qLiI-pBOG1sVFG5Nrfl0PCCOO9v5tNKSv2IrOaqtRWqRAZBipRwLVurs">
+        }
+
+    </div>
+</div>
+

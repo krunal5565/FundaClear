@@ -1,0 +1,84 @@
+﻿@model Loyalty.DTO.CustomerDTO
+
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Save", "Customer", FormMethod.Post))
+        {
+           
+
+            @Html.HiddenFor(m => m.CustomerId)
+            @Html.HiddenFor(m => m.CurrentTenantId)
+            @Html.HiddenFor(m => m.ID)
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="" style="background-color:white; margin:0px 50px; border-radius:10px; border:1px solid #ddd">
+                <div style=" color: red; float: left; margin-left: 20px;">
+                    @TempData["ErrorMessage"]
+                </div>
+                <br />
+
+                <div class="modal-body mx-3">
+                    @if (String.IsNullOrWhiteSpace(Model.CustomerId))
+                    {
+                        <div class="row gy-4" style="margin:5px">
+                            <div class="col-md-6">
+                                <label data-error="wrong" data-success="right" for="form3">User Name</label>
+                                @Html.EditorFor(model => model.LoginId, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                            </div>
+                            <div class="col-md-6">
+                                <label data-error="wrong" data-success="right" for="form3">Password</label>
+                                @Html.PasswordFor(model => model.PassKey, new { @class = "form-control", htmlAttributes = new { @title = "", @Placeholder = "", } })
+                            </div>
+                        </div>
+                    }
+                    <div class="row gy-4" style="margin:5px">
+                        <div class="col-md-6">
+                            <label data-error="wrong" data-success="right" for="form3">Customer Name</label>
+                            @Html.EditorFor(model => model.CustomerName, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                        </div>
+                        <div class="col-md-6">
+                            <label data-error="wrong" data-success="right" for="form3">Mobile Number</label>
+                            @if (String.IsNullOrWhiteSpace(Model.CustomerId))
+                            {
+                                @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.MobileNumber, new { htmlAttributes = new { @disabled = "true", @title = "", @Placeholder = "", @class = "form-control" } })
+                            }
+                        </div>
+                    </div>
+                    <div class="row gy-4" style="margin:5px">
+                        <div class="col-md-6">
+                            <label data-error="wrong" data-success="right" for="form3">Email ID</label>
+                            @if (String.IsNullOrWhiteSpace(Model.CustomerId))
+                            {
+                                @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                            }
+                            else
+                            {
+                                @Html.EditorFor(model => model.EmailId, new { htmlAttributes = new { @disabled = "true", @title = "", @Placeholder = "", @class = "form-control" } })
+                            }
+                        </div>
+                        <div class="col-md-6">
+                            <label data-error="wrong" data-success="right" for="form3">Locality</label>
+                            @Html.EditorFor(model => model.Locality, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="row gy-4" style="margin:5px">
+                        <div class="col-md-12">
+                            <label data-error="wrong" data-success="right" for="form3">Address</label>
+                            @Html.TextAreaFor(model => model.Address, new { @class = "form-control", htmlAttributes = new { @title = "", @Placeholder = "" } })
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button class="btn btn-primary" type="submit" id="post"><span></span>Save</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

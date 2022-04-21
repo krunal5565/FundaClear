@@ -1,0 +1,35 @@
+﻿@model Loyalty.DTO.CustomerTransactionDTO
+
+
+
+<div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        @using (Html.BeginForm("AddCustomerTransaction", "Customer", FormMethod.Post))
+        {
+            @Html.HiddenFor(m=>m.CustId)
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Add Customer Transaction</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body mx-3">
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
+                        @Html.EditorFor(x => x.BillAmount , new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                    </div>
+                    <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="form3">Bill Number</label>
+                        @Html.EditorFor(x => x.BillNumber, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                    </div>
+                   
+                </div>
+                <div class="modal-footer d-flex justify-content-end">
+                    <button class="btn btn-primary" type="submit" id="post"><span></span>Save</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>

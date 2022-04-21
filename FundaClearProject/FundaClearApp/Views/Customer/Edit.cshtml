@@ -1,0 +1,23 @@
+﻿@model CustomerModel
+
+<div id="customerDiv">
+    <div class="row">
+        <div class="col-md-12">
+            <div style="margin:20px;">
+                <h4>Customer Save</h4>
+            </div>
+            <hr />
+        </div>
+        <div class="col-md-6">
+            @Html.Partial("_CustomerSave", Model.Customer)
+        </div>
+        <div class="col-md-6">
+            @Html.Partial("_CustomerTransactions", Model.CustomerTransactions)
+        </div>
+    </div>
+   
+
+    @Html.Partial("_CustTransSave", Model.CustomerTransaction)
+
+    
+</div>

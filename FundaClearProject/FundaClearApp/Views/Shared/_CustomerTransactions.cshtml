@@ -1,0 +1,28 @@
+﻿@model List<Loyalty.DTO.CustomerTransactionDTO>
+<div style="margin-top:20px; background:white;">
+
+    <div style="width:100%; height:30px">
+        <a href="#" style="float:right;  background-color: #2e4b90;" class="btn btn-primary btn-sm active" role="button" data-toggle="modal" data-target="#modalSubscriptionForm" aria-pressed="true">
+            + Add New Transactions
+        </a>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Bill Number</th>
+                <th>Bill Date </th>
+                <th>Bill Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.BillNumber</td>
+                    <td>@item.BillDate</td>
+                    <td>@item.BillAmount</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

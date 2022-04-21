@@ -1,0 +1,302 @@
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\appsettings.json
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.exe
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.deps.json
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.runtimeconfig.json
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.runtimeconfig.dev.json
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.pdb
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.Views.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.Views.pdb
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfoInputs.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfo.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.CoreCompileInputs.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.MvcApplicationPartsAssemblyInfo.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\staticwebassets\FundaClearApp.StaticWebAssets.Manifest.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\staticwebassets\FundaClearApp.StaticWebAssets.xml
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\FundaClearApp.styles.css
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.TagHelpers.input.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.TagHelpers.output.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorCoreGenerate.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorTargetAssemblyInfo.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorTargetAssemblyInfo.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.Views.pdb
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.dll
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.pdb
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.genruntimeconfig.cache
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.CopyComplete
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_GuestLayout.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DTO.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.ServiceLibrary.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DataLayer.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.Shared.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DTO.pdb
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.ServiceLibrary.pdb
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DataLayer.pdb
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.Shared.pdb
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustomerSave.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Login.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Signup.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Signup.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+D:\Prashant\Funda Clear\FundaClearApp\bin\Debug\netcoreapp3.1\GridMvc.dll
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustomerTransactions.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustTransSave.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Add.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Edit.cshtml.g.cs
+D:\Prashant\Funda Clear\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.AssemblyReference.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.AssemblyReference.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfoInputs.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfo.cs
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.CoreCompileInputs.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cache
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cs
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.dll
+C:\Users\kruna\Desktop\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.exe
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.deps.json
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.runtimeconfig.json
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.runtimeconfig.dev.json
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.Views.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\FundaClearApp.Views.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\GridMvc.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\dotnet-aspnet-codegenerator-design.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.AttributedModel.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Convention.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Hosting.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.Runtime.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Composition.TypedParts.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DataLayer.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DTO.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.ServiceLibrary.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.Shared.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DataLayer.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.DTO.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.ServiceLibrary.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\bin\Debug\netcoreapp3.1\Loyalty.Shared.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.AssemblyReference.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfoInputs.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.AssemblyInfo.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.CoreCompileInputs.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorAssemblyInfo.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\staticwebassets\FundaClearApp.StaticWebAssets.Manifest.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\staticwebassets\FundaClearApp.StaticWebAssets.xml
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\scopedcss\bundle\FundaClearApp.styles.css
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.TagHelpers.input.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.TagHelpers.output.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorCoreGenerate.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Add.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Edit.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Customer\Index.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Dashboard.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Signup.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustomerSave.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustomerTransactions.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CustTransSave.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_GuestLayout.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Login.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Signup.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorTargetAssemblyInfo.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.RazorTargetAssemblyInfo.cs
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.Views.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.dll
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.pdb
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.genruntimeconfig.cache
+C:\Users\kruna\Desktop\FundaClearProject\FundaClearApp\obj\Debug\netcoreapp3.1\FundaClearApp.csproj.CopyComplete

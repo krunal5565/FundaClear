@@ -1,0 +1,29 @@
+﻿@model Loyalty.DTO.TenantDTO
+@{
+    Layout = "_GuestLayout";
+}
+
+<section id="hero" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-6 rounded d-flex flex-column justify-content-center">
+                <img src="img/hero-img.png" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 hero-img aos-init aos-animate" data-aos="zoom-out" data-aos-delay="200">
+                <h1 data-aos="fade-up" class="aos-init aos-animate">We offer modern solutions for growing your business</h1>
+
+                <div id="dvSignup" style="">
+                    @Html.Partial("_Signup", Model)
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+   
+
+</script>
