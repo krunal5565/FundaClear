@@ -36,10 +36,10 @@
                     <td>@item.Address</td>
                     <td>@item.BalancePoint</td>
                     <td>
-                        <a id="btnEdit" href="/customer/edit?id=@item.CustomerId">Edit</a>
+                        <a id="btnEdit" class="fa fa-edit" style="color:blue" href="/customer/edit?id=@item.CustomerId"></a>
 
                         &nbsp;
-                        <a href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete" class="btnDelete">Delete</a>
+                        <a class="fa fa-trash" style="color:red" href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete" ></a>
                     </td>
                 </tr>
                 }

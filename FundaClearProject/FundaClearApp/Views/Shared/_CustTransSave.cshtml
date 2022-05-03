@@ -18,13 +18,17 @@
                 <div class="modal-body mx-3">
                     <div class="md-form mb-5">
                         <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
-                        @Html.EditorFor(x => x.BillAmount , new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
+                        @Html.EditorFor(model => model.BillDate, new { htmlAttributes = new { @title = "", @class = "form-control" } })
+                    </div>
+                   <div class="md-form mb-5">
+                        <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
+                        @Html.EditorFor(x => x.BillAmount, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
                     </div>
                     <div class="md-form mb-5">
                         <label data-error="wrong" data-success="right" for="form3">Bill Number</label>
                         @Html.EditorFor(x => x.BillNumber, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
                     </div>
-                   
+
                 </div>
                 <div class="modal-footer d-flex justify-content-end">
                     <button class="btn btn-primary" type="submit" id="post"><span></span>Save</button>

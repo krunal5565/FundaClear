@@ -18,17 +18,17 @@ namespace FundaClearApp.Controllers
         public string connectionString;
         public CustomerController()
         {
-            connectionString = Helper.GetConnectionString();
+            connectionString = ConnectionHelper.GetConnectionString();
         }
 
-        private string GetSessionTanantID()
-        {
-            return HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantId") : "";
-        }
-
-        private string GetSessionTanantName()
+        public string GetSessionTanantName()
         {
           return  HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantName") : "";
+        }
+
+        public  string GetSessionTanantID()
+        {
+            return HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantId") : "";
         }
 
         public ActionResult AddCustomerTransaction(CustomerTransactionDTO model)
@@ -37,7 +37,7 @@ namespace FundaClearApp.Controllers
             model.TenantId = GetSessionTanantID();
             model.CustId = model.CustId;
             model.CreatedBy = GetSessionTanantName() ;
-            model.BillDate = DateTime.UtcNow;
+            model.BillDate = model.BillDate;
             model.ActiveStatus = true;
             ResponseDTO customerResponse = objCustomerManager.SaveCustomerTransaction(model);
 
@@ -46,7 +46,7 @@ namespace FundaClearApp.Controllers
 
         public ActionResult Index()
         {
-            List<CustomerDTO> lstCustomerDTO = GetAllCustomers();
+            List<CustomerDTO> lstCustomerDTO = APIHelper.GetAllCustomers(GetSessionTanantID());
             return View(lstCustomerDTO);
         }
 
@@ -63,10 +63,10 @@ namespace FundaClearApp.Controllers
         {
             bool status = false;
            
-            CustomerDTO objCustomerDTO = GetCustomer(GetSessionTanantID(), id);
+            CustomerDTO objCustomerDTO = APIHelper.GetCustomer(GetSessionTanantID(), id);
             objCustomerDTO.ActiveStatus = false;
 
-            ResponseDTO objCustResponseDTO = UpdateCustomer(objCustomerDTO);
+            ResponseDTO objCustResponseDTO = APIHelper.UpdateCustomer(objCustomerDTO);
             if(objCustResponseDTO != null)
             {
                 status = objCustResponseDTO.Status;
@@ -80,75 +80,20 @@ namespace FundaClearApp.Controllers
         {
             CustomerModel objCustomerModel = new CustomerModel();
 
-            objCustomerModel.Customer = GetCustomer(GetSessionTanantID(), id);
-            objCustomerModel.CustomerTransactions = GetCustomerTransactions(GetSessionTanantID(), id);
-            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = id };
+            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id);
+            objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), id);
+            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = id, BillDate = DateTime.Now };
             return View("Edit", objCustomerModel);
         }
 
-        public CustomerDTO GetCustomer(string tenantID, string customerID)
-        {
-            CustomerDTO objCustomerDTO = new CustomerDTO();
 
-            CustomerManager objCustomerManager = new CustomerManager(connectionString);
-            ResponseDTO objResponseDTO = objCustomerManager.GetCustomerById(new CustomerDTO { CustomerId = customerID, CurrentTenantId = tenantID });
-
-            if (objResponseDTO != null && objResponseDTO.Data != null)
-            {
-                objCustomerDTO = objResponseDTO.Data as CustomerDTO;
-            }
-
-            return objCustomerDTO;
-        }
-
-        public ResponseDTO UpdateCustomer(CustomerDTO objCustomerDTO)
-        {
-            CustomerManager objCustomerManager = new CustomerManager(connectionString);
-
-            ResponseDTO customerResponse = objCustomerManager.Update(objCustomerDTO);
-
-            return customerResponse;
-
-        }
-
-        public List<CustomerDTO> GetAllCustomers()
-        {
-            List<CustomerDTO> lstCustomerDTO = new List<CustomerDTO>();
-            CustomerManager objCustomerManager = new CustomerManager(connectionString);
-            ResponseDTO customerResponse = objCustomerManager.GetAllCustomers(GetSessionTanantID());
-
-            if (customerResponse != null && customerResponse.DataList != null)
-            {
-                lstCustomerDTO = customerResponse.DataList as List<CustomerDTO>;
-
-                if (lstCustomerDTO != null)
-                {
-                    lstCustomerDTO = lstCustomerDTO.Where(x => x.ActiveStatus).ToList();
-                }
-            }
-            return lstCustomerDTO;
-        }
-
-        public List<CustomerTransactionDTO> GetCustomerTransactions(string tenantID, string customerID)
-        {
-            List<CustomerTransactionDTO> lstCustomerTransactions = new List<CustomerTransactionDTO>();
-            CustomerManager objCustomerManager = new CustomerManager(connectionString);
-            ResponseDTO objResponseCustomerTransactions = objCustomerManager.GetCustomerTransactions(tenantID, customerID);
-
-            if(objResponseCustomerTransactions != null && objResponseCustomerTransactions.DataList != null)
-            {
-                lstCustomerTransactions = objResponseCustomerTransactions.DataList as List<CustomerTransactionDTO>;
-            }
-
-            return lstCustomerTransactions;
-        }
 
         [HttpPost]
-        public ActionResult Save(CustomerDTO model)
+        public ActionResult Add(CustomerDTO model)
         {
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
 
-            string errorMessage = validateCustomer(model);
+            string errorMessage = ValidationHelper.ValidateCustomer(model);
 
             if (string.IsNullOrEmpty(errorMessage))
             {
@@ -162,12 +107,50 @@ namespace FundaClearApp.Controllers
                     model.CreatedBy = GetSessionTanantName();
                     responseDTO = objCustomerManager.Save(model);
                 }
+
+                if (responseDTO != null)
+                {
+                    if (responseDTO.Status)
+                    {
+                        return Redirect("Index");
+                    }
+                    else
+                    {
+                        TempData[Constants.KeyErrorMessage] = responseDTO.Message;
+                    }
+                }
                 else
                 {
-                    model.ModifiedBy = GetSessionTanantName();
-                    responseDTO = objCustomerManager.Update(model);
+                    TempData[Constants.KeyErrorMessage] = Constants.ErrorOpps;
                 }
-               
+            }
+            else
+            {
+                TempData[Constants.KeyErrorMessage] = errorMessage;
+            }
+
+            CustomerModel objCustomerModel = new CustomerModel();
+            objCustomerModel.Customer = model;
+
+            return View("Add", objCustomerModel);
+        }
+
+
+        [HttpPost]
+        public ActionResult Edit(CustomerDTO model)
+        {
+            CustomerManager objCustomerManager = new CustomerManager(connectionString);
+
+            string errorMessage = ValidationHelper.ValidateCustomer(model);
+
+            if (string.IsNullOrEmpty(errorMessage))
+            {
+                model.ActiveStatus = true;
+                model.CurrentTenantId = GetSessionTanantID();
+
+                model.ModifiedBy = GetSessionTanantName();
+                ResponseDTO responseDTO = objCustomerManager.Update(model);
+
                 if (responseDTO != null)
                 {
                     if (responseDTO.Status)
@@ -187,52 +170,19 @@ namespace FundaClearApp.Controllers
             else
             {
                 TempData[Constants.KeyErrorMessage] = errorMessage;
-            
             }
-            return View("Add", model);
+
+            CustomerModel objCustomerModel = new CustomerModel();
+            objCustomerModel.Customer = model;
+            objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), model.CustomerId);
+            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = model.CustomerId, BillDate = DateTime.Now };
+
+            return View("Edit", objCustomerModel);
         }
 
         #region PrivateMethods
 
-        private string validateCustomer(CustomerDTO model)
-        {
-            string errorMessage = string.Empty;
-
-            if (model == null)
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "details");
-            }
-            if (string.IsNullOrEmpty(model.LoginId) && string.IsNullOrEmpty(model.CustomerId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Username");
-            }
-            else if (string.IsNullOrEmpty(model.PassKey) && string.IsNullOrEmpty(model.CustomerId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Password");
-            }
-            else if (string.IsNullOrEmpty(model.CustomerName))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Customer Name");
-            }
-            else if (string.IsNullOrEmpty(model.MobileNumber) && string.IsNullOrEmpty(model.CustomerId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Mobile Number");
-            }
-            else if (string.IsNullOrEmpty(model.EmailId) && string.IsNullOrEmpty(model.CustomerId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Email Id");
-            }
-            else if (string.IsNullOrEmpty(model.Locality))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Locality");
-            }
-            else if (string.IsNullOrEmpty(model.Address))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Address");
-            }
-
-            return errorMessage;
-        }
+      
         #endregion
     }
 

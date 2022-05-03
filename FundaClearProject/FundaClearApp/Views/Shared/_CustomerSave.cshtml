@@ -1,9 +1,6 @@
 ﻿@model Loyalty.DTO.CustomerDTO
 
-<div class="row">
-    <div class="col-md-12">
-        @using (Html.BeginForm("Save", "Customer", FormMethod.Post))
-        {
+
            
 
             @Html.HiddenFor(m => m.CustomerId)
@@ -76,9 +73,8 @@
                     <button class="btn btn-primary" type="submit" id="post"><span></span>Save</button>
                 </div>
             </div>
-        }
-    </div>
-</div>
+
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

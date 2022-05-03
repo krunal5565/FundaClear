@@ -1,7 +1,13 @@
 ﻿@model CustomerModel
 
-<div id="customerDiv">
-    @Html.Partial("_CustomerSave", Model.Customer);
-
-
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Add", "Customer", FormMethod.Post))
+        {
+        <div id="customerDiv">
+            @Html.Partial("_CustomerSave", Model.Customer);
+        </div>
+        }
+            
+    </div>
 </div>

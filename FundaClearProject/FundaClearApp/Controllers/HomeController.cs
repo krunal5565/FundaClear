@@ -23,7 +23,7 @@ namespace FundaClearApp.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            connectionString = Helper.GetConnectionString();
+            connectionString = ConnectionHelper.GetConnectionString();
         }
 
         public IActionResult Index()
@@ -83,7 +83,7 @@ namespace FundaClearApp.Controllers
         [HttpPost]
         public ActionResult Signup(TenantDTO model)
         {
-            string errorMessage = validateSignup(model);
+            string errorMessage = ValidationHelper.ValidateSignup(model);
 
             if (string.IsNullOrEmpty(errorMessage))
             {
@@ -119,50 +119,6 @@ namespace FundaClearApp.Controllers
             }
 
             return View(model);
-        }
-
-        private string validateSignup(TenantDTO model)
-        {
-            string errorMessage = string.Empty;
-
-            if (model == null)
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "details");
-            }
-            if (string.IsNullOrEmpty(model.LoginId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Username");
-            }
-            else if (string.IsNullOrEmpty(model.PassKey))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Password");
-            }
-            else if (string.IsNullOrEmpty(model.MobileNumber))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Mobile Number");
-            }
-            else if (string.IsNullOrEmpty(model.EmailId))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Email ID");
-            }
-            else if (string.IsNullOrEmpty(model.Address))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Address");
-            }
-            else if (string.IsNullOrEmpty(model.Locality))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Locality");
-            }
-            else if (string.IsNullOrEmpty(model.ContactPerson))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Contact Person");
-            }
-            else if (string.IsNullOrEmpty(model.TenantName))
-            {
-                errorMessage = string.Format(Constants.ErrorEmptyField, "Tenant Name");
-            }
-
-            return errorMessage;
         }
     }
 }

@@ -8,16 +8,22 @@
             </div>
             <hr />
         </div>
+    </div>
+    <div class="row">
+
         <div class="col-md-6">
-            @Html.Partial("_CustomerSave", Model.Customer)
+            @using (Html.BeginForm("Edit", "Customer", FormMethod.Post))
+            {
+                @Html.Partial("_CustomerSave", Model.Customer)
+            }
         </div>
         <div class="col-md-6">
             @Html.Partial("_CustomerTransactions", Model.CustomerTransactions)
         </div>
+
     </div>
-   
 
-    @Html.Partial("_CustTransSave", Model.CustomerTransaction)
+        @Html.Partial("_CustTransSave", Model.CustomerTransaction)
 
-    
-</div>
+
+    </div>
