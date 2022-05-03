@@ -53,6 +53,7 @@ namespace FundaClear.Business
             if (objResponseCustomerTransactions != null && objResponseCustomerTransactions.DataList != null)
             {
                 lstCustomerTransactions = objResponseCustomerTransactions.DataList as List<CustomerTransactionDTO>;
+                lstCustomerTransactions = lstCustomerTransactions.OrderBy(x => x.BillDate).ToList();
             }
 
             return lstCustomerTransactions;

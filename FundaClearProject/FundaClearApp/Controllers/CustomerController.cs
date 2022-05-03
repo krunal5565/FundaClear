@@ -86,8 +86,6 @@ namespace FundaClearApp.Controllers
             return View("Edit", objCustomerModel);
         }
 
-
-
         [HttpPost]
         public ActionResult Add(CustomerDTO model)
         {
