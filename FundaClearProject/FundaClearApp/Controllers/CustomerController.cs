@@ -23,10 +23,10 @@ namespace FundaClearApp.Controllers
 
         public string GetSessionTanantName()
         {
-          return  HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantName") : "";
+            return HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantName") : "";
         }
 
-        public  string GetSessionTanantID()
+        public string GetSessionTanantID()
         {
             return HttpContext != null && HttpContext.Session != null ? HttpContext.Session.GetString("TenantId") : "";
         }
@@ -36,12 +36,12 @@ namespace FundaClearApp.Controllers
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
             model.TenantId = GetSessionTanantID();
             model.CustId = model.CustId;
-            model.CreatedBy = GetSessionTanantName() ;
+            model.CreatedBy = GetSessionTanantName();
             model.BillDate = model.BillDate;
             model.ActiveStatus = true;
             ResponseDTO customerResponse = objCustomerManager.SaveCustomerTransaction(model);
 
-            return RedirectToAction("Edit", new { id = model.CustId });
+            return RedirectToAction("CustomerTransactions", new { id = model.CustId });
         }
 
         public ActionResult Index()
@@ -55,19 +55,19 @@ namespace FundaClearApp.Controllers
         {
             CustomerModel objCustomerModel = new CustomerModel();
             objCustomerModel.Customer = new CustomerDTO();
-            return View("Add", objCustomerModel);
+            return View("Save", objCustomerModel);
         }
 
         [HttpPost]
         public bool Delete(string id)
         {
             bool status = false;
-           
+
             CustomerDTO objCustomerDTO = APIHelper.GetCustomer(GetSessionTanantID(), id);
             objCustomerDTO.ActiveStatus = false;
 
             ResponseDTO objCustResponseDTO = APIHelper.UpdateCustomer(objCustomerDTO);
-            if(objCustResponseDTO != null)
+            if (objCustResponseDTO != null)
             {
                 status = objCustResponseDTO.Status;
             }
@@ -81,13 +81,22 @@ namespace FundaClearApp.Controllers
             CustomerModel objCustomerModel = new CustomerModel();
 
             objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id);
+            return View("Save", objCustomerModel);
+        }
+
+        [HttpGet]
+        public ActionResult CustomerTransactions(string id)
+        {
+            CustomerModel objCustomerModel = new CustomerModel();
+            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id);
             objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), id);
             objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = id, BillDate = DateTime.Now };
-            return View("Edit", objCustomerModel);
+
+            return View("CustomerTransactions", objCustomerModel);
         }
 
         [HttpPost]
-        public ActionResult Add(CustomerDTO model)
+        public ActionResult Save(CustomerDTO model)
         {
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
 
@@ -104,6 +113,11 @@ namespace FundaClearApp.Controllers
                     model.CreatedDate = DateTime.UtcNow;
                     model.CreatedBy = GetSessionTanantName();
                     responseDTO = objCustomerManager.Save(model);
+                }
+                else
+                {
+                    model.ModifiedBy = GetSessionTanantName();
+                    responseDTO = objCustomerManager.Update(model);
                 }
 
                 if (responseDTO != null)
@@ -128,60 +142,70 @@ namespace FundaClearApp.Controllers
             }
 
             CustomerModel objCustomerModel = new CustomerModel();
-            objCustomerModel.Customer = model;
 
-            return View("Add", objCustomerModel);
-        }
-
-
-        [HttpPost]
-        public ActionResult Edit(CustomerDTO model)
-        {
-            CustomerManager objCustomerManager = new CustomerManager(connectionString);
-
-            string errorMessage = ValidationHelper.ValidateCustomer(model);
-
-            if (string.IsNullOrEmpty(errorMessage))
+            if(!string.IsNullOrEmpty(model.CustomerId))
             {
-                model.ActiveStatus = true;
-                model.CurrentTenantId = GetSessionTanantID();
-
-                model.ModifiedBy = GetSessionTanantName();
-                ResponseDTO responseDTO = objCustomerManager.Update(model);
-
-                if (responseDTO != null)
-                {
-                    if (responseDTO.Status)
-                    {
-                        return Redirect("Index");
-                    }
-                    else
-                    {
-                        TempData[Constants.KeyErrorMessage] = responseDTO.Message ;
-                    }
-                }
-                else
-                {
-                    TempData[Constants.KeyErrorMessage] = Constants.ErrorOpps;
-                }              
+                objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), model.CustomerId);
+                objCustomerModel.Customer.Locality = model.Locality;
+                objCustomerModel.Customer.CustomerName = model.CustomerName;
+                objCustomerModel.Customer.Address = model.Address;
             }
             else
             {
-                TempData[Constants.KeyErrorMessage] = errorMessage;
+                objCustomerModel.Customer = model;
             }
 
-            CustomerModel objCustomerModel = new CustomerModel();
-            objCustomerModel.Customer = model;
-            objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), model.CustomerId);
-            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = model.CustomerId, BillDate = DateTime.Now };
+            string viewName = "Save";
 
-            return View("Edit", objCustomerModel);
+            return View(viewName, objCustomerModel);
         }
 
-        #region PrivateMethods
 
-      
-        #endregion
+        //[HttpPost]
+        //public ActionResult Edit(CustomerDTO model)
+        //{
+        //    CustomerManager objCustomerManager = new CustomerManager(connectionString);
+
+        //    string errorMessage = ValidationHelper.ValidateCustomer(model);
+
+        //    if (string.IsNullOrEmpty(errorMessage))
+        //    {
+        //        model.ActiveStatus = true;
+        //        model.CurrentTenantId = GetSessionTanantID();
+
+        //        model.ModifiedBy = GetSessionTanantName();
+        //        ResponseDTO responseDTO = objCustomerManager.Update(model);
+
+        //        if (responseDTO != null)
+        //        {
+        //            if (responseDTO.Status)
+        //            {
+        //                return Redirect("Index");
+        //            }
+        //            else
+        //            {
+        //                TempData[Constants.KeyErrorMessage] = responseDTO.Message;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            TempData[Constants.KeyErrorMessage] = Constants.ErrorOpps;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        TempData[Constants.KeyErrorMessage] = errorMessage;
+        //    }
+
+        //    CustomerModel objCustomerModel = new CustomerModel();
+        //    objCustomerModel.Customer = model;
+        //    objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), model.CustomerId);
+        //    objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = model.CustomerId, BillDate = DateTime.Now };
+
+        //    return View("Edit", objCustomerModel);
+        //}
+
+
     }
 
 

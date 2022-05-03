@@ -13,7 +13,6 @@
         </a>
     </div>
     <hr />
-
     <div>
         <table class="table table-bordered">
             <thead>
@@ -29,28 +28,37 @@
             <tbody>
                 @foreach (var item in Model)
                 {
-                <tr>
-                    <th scope="row">@item.CustomerName</th>
-                    <td>@item.MobileNumber</td>
-                    <td>@item.EmailId</td>
-                    <td>@item.Address</td>
-                    <td>@item.BalancePoint</td>
-                    <td>
-                        <a id="btnEdit" class="fa fa-edit" style="color:blue" href="/customer/edit?id=@item.CustomerId"></a>
+                    <tr>
+                        <th scope="row">@item.CustomerName</th>
+                        <td>@item.MobileNumber</td>
+                        <td>@item.EmailId</td>
+                        <td>@item.Address</td>
+                        <td>@item.BalancePoint</td>
+                        <td>
+                            <span style="border:1px solid black; border-radius:4px; padding:5px;">
+                                <a id="btnEdit" class="fa fa-edit" style="color:blue" href="/customer/edit?id=@item.CustomerId"></a>
 
-                        &nbsp;
-                        <a class="fa fa-trash" style="color:red" href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete" ></a>
-                    </td>
-                </tr>
+                            </span>
+                            &nbsp;
+                            <span style="border:1px solid black; border-radius:4px; padding:5px;">
+                                <a class="fa fa-trash" style="color:red" href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete"></a>
+                            </span>
+                            &nbsp;
+                            <span style="border:1px solid black; border-radius:4px; padding:5px;color:purple">
+                                <a id="btnTransactions" href="/customer/CustomerTransactions?id=@item.CustomerId">
+                                    <i class="fa fa-plus"> &nbsp;<i class="fa fa-rupee"></i>&nbsp;<i class="fa fa-minus"></i></i>
+                                </a>
+                            </span>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
 <script>
-   
-    function DeleteCustomer(id)
-    {
+
+    function DeleteCustomer(id) {
         $.ajax({
             type: "POST",
             url: "/Customer/Delete?id=" + id,

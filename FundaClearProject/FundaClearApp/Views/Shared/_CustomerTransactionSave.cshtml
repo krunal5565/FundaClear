@@ -2,12 +2,12 @@
 
 
 
-<div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="modalCustomerTransaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
         @using (Html.BeginForm("AddCustomerTransaction", "Customer", FormMethod.Post))
         {
-            @Html.HiddenFor(m=>m.CustId)
+            @Html.HiddenFor(m => m.CustId)
             <div class="modal-content">
                 <div class="modal-header text-center">
                     <h4 class="modal-title w-100 font-weight-bold">Add Customer Transaction</h4>
@@ -20,7 +20,7 @@
                         <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
                         @Html.EditorFor(model => model.BillDate, new { htmlAttributes = new { @title = "", @class = "form-control" } })
                     </div>
-                   <div class="md-form mb-5">
+                    <div class="md-form mb-5">
                         <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
                         @Html.EditorFor(x => x.BillAmount, new { htmlAttributes = new { @title = "", @Placeholder = "", @class = "form-control" } })
                     </div>
