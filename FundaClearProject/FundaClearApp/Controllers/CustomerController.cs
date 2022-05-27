@@ -5,6 +5,7 @@ using Loyalty.DTO;
 using Loyalty.ServiceLibrary;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,12 +14,16 @@ using System.Linq;
 
 namespace FundaClearApp.Controllers
 {
+    
     public class CustomerController : Controller
     {
         public string connectionString;
-        public CustomerController()
+        private readonly IConfiguration configuration;
+        public CustomerController(IConfiguration iConfiguration)
         {
-            connectionString = ConnectionHelper.GetConnectionString();
+          //  connectionString = ConnectionHelper.GetConnectionString();
+            connectionString = iConfiguration.GetConnectionString("DefaultConnection");
+            configuration = iConfiguration;
         }
 
         public string GetSessionTanantName()
@@ -39,14 +44,25 @@ namespace FundaClearApp.Controllers
             model.CreatedBy = GetSessionTanantName();
             model.BillDate = model.BillDate;
             model.ActiveStatus = true;
+           
             ResponseDTO customerResponse = objCustomerManager.SaveCustomerTransaction(model);
 
-            return RedirectToAction("CustomerTransactions", new { id = model.CustId });
+            string actionName = string.Empty ;
+
+            if (model.IsAddPoint)
+            {
+                actionName = "CustomerTransactions";
+            }
+            else
+            {
+                actionName = "RedemptionTransactions";
+            }
+            return RedirectToAction(actionName, new { id = model.CustId });
         }
 
         public ActionResult Index()
         {
-            List<CustomerDTO> lstCustomerDTO = APIHelper.GetAllCustomers(GetSessionTanantID());
+            List<CustomerDTO> lstCustomerDTO = APIHelper.GetAllCustomers(GetSessionTanantID(), connectionString);
             return View(lstCustomerDTO);
         }
 
@@ -63,10 +79,10 @@ namespace FundaClearApp.Controllers
         {
             bool status = false;
 
-            CustomerDTO objCustomerDTO = APIHelper.GetCustomer(GetSessionTanantID(), id);
+            CustomerDTO objCustomerDTO = APIHelper.GetCustomer(GetSessionTanantID(), id, connectionString);
             objCustomerDTO.ActiveStatus = false;
 
-            ResponseDTO objCustResponseDTO = APIHelper.UpdateCustomer(objCustomerDTO);
+            ResponseDTO objCustResponseDTO = APIHelper.UpdateCustomer(objCustomerDTO, connectionString);
             if (objCustResponseDTO != null)
             {
                 status = objCustResponseDTO.Status;
@@ -80,17 +96,22 @@ namespace FundaClearApp.Controllers
         {
             CustomerModel objCustomerModel = new CustomerModel();
 
-            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id);
+            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id, connectionString);
             return View("Save", objCustomerModel);
         }
 
         [HttpGet]
         public ActionResult CustomerTransactions(string id)
         {
-            CustomerModel objCustomerModel = new CustomerModel();
-            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id);
-            objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), id);
-            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = id, BillDate = DateTime.Now };
+            CustomerModel objCustomerModel = GetCustomerTransactions(id, true);
+
+            return View("CustomerTransactions", objCustomerModel);
+        }
+
+        [HttpGet]
+        public ActionResult RedemptionTransactions(string id)
+        {
+            CustomerModel objCustomerModel = GetCustomerTransactions(id, false);
 
             return View("CustomerTransactions", objCustomerModel);
         }
@@ -145,7 +166,7 @@ namespace FundaClearApp.Controllers
 
             if(!string.IsNullOrEmpty(model.CustomerId))
             {
-                objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), model.CustomerId);
+                objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), model.CustomerId, connectionString);
                 objCustomerModel.Customer.Locality = model.Locality;
                 objCustomerModel.Customer.CustomerName = model.CustomerName;
                 objCustomerModel.Customer.Address = model.Address;
@@ -160,6 +181,22 @@ namespace FundaClearApp.Controllers
             return View(viewName, objCustomerModel);
         }
 
+        public CustomerModel GetCustomerTransactions(string id, bool isAddTransactions)
+        {
+            CustomerModel objCustomerModel = new CustomerModel();
+            objCustomerModel.Customer = APIHelper.GetCustomer(GetSessionTanantID(), id, connectionString);
+            objCustomerModel.CustomerTransactions = APIHelper.GetCustomerTransactions(GetSessionTanantID(), id, connectionString);
+            objCustomerModel.IsAddPoints = isAddTransactions;
+
+            if (objCustomerModel.CustomerTransactions != null)
+            {
+                objCustomerModel.CustomerTransactions= objCustomerModel.CustomerTransactions.Where(x => x.IsAddPoint = isAddTransactions).ToList();
+            }
+
+            objCustomerModel.CustomerTransaction = new CustomerTransactionDTO { CustId = id, BillDate = DateTime.Now.Date , IsAddPoint  = isAddTransactions};
+
+            return objCustomerModel;
+        }
 
         //[HttpPost]
         //public ActionResult Edit(CustomerDTO model)

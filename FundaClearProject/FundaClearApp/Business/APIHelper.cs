@@ -13,10 +13,8 @@ namespace FundaClear.Business
     public static class APIHelper
     {
 
-        public static CustomerDTO GetCustomer(string tenantID, string customerID)
+        public static CustomerDTO GetCustomer(string tenantID, string customerID, string connectionString)
         {
-            string connectionString = ConnectionHelper.GetConnectionString();
-
             CustomerDTO objCustomerDTO = new CustomerDTO();
 
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
@@ -30,10 +28,8 @@ namespace FundaClear.Business
             return objCustomerDTO;
         }
 
-        public static ResponseDTO UpdateCustomer(CustomerDTO objCustomerDTO)
+        public static ResponseDTO UpdateCustomer(CustomerDTO objCustomerDTO, string connectionString)
         {
-            string connectionString = ConnectionHelper.GetConnectionString();
-
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
 
             ResponseDTO customerResponse = objCustomerManager.Update(objCustomerDTO);
@@ -42,10 +38,8 @@ namespace FundaClear.Business
         }
 
 
-        public static List<CustomerTransactionDTO> GetCustomerTransactions(string tenantID, string customerID)
+        public static List<CustomerTransactionDTO> GetCustomerTransactions(string tenantID, string customerID, string connectionString)
         {
-            string connectionString = ConnectionHelper.GetConnectionString();
-
             List<CustomerTransactionDTO> lstCustomerTransactions = new List<CustomerTransactionDTO>();
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
             ResponseDTO objResponseCustomerTransactions = objCustomerManager.GetCustomerTransactions(tenantID, customerID);
@@ -59,10 +53,8 @@ namespace FundaClear.Business
             return lstCustomerTransactions;
         }
 
-        public static List<CustomerDTO> GetAllCustomers(string tenantID)
+        public static List<CustomerDTO> GetAllCustomers(string tenantID, string connectionString)
         {
-            string connectionString = ConnectionHelper.GetConnectionString();
-
             List<CustomerDTO> lstCustomerDTO = new List<CustomerDTO>();
             CustomerManager objCustomerManager = new CustomerManager(connectionString);
             ResponseDTO customerResponse = objCustomerManager.GetAllCustomers(tenantID);

@@ -4,7 +4,14 @@
     <div class="row">
         <div class="col-md-12">
             <div style="margin:20px;">
-                <h4>Customer Transactions</h4>
+                @if (Model.IsAddPoints)
+                {
+                    <h4>Customer Transactions</h4>
+                }
+                else
+                {
+                    <h4>Customer Redemptions</h4>
+                }
             </div>
             <hr />
         </div>
@@ -12,13 +19,14 @@
     <div style="padding: 30px;">
         <div class="row">
             <div class="col-md-12">
-                Customer Name : @Model.Customer.CustomerName <br />
-                Customer Number : @Model.Customer.MobileNumber <br />
-                Customer Location : @Model.Customer.Locality <br />
-                Customer Address : @Model.Customer.Address <br />
+
+                <i class="fa fa-user-o"></i> : @Model.Customer.CustomerName <br />
+                <i class="fa fa-mobile"></i> : @Model.Customer.MobileNumber <br />
+                <i class="fa fa-user-o"></i> : @Model.Customer.Locality <br />
+                <i class="fa fa-user-o"></i> : @Model.Customer.Address <br />
             </div>
             <div class="col-md-12">
-                @Html.Partial("_CustomerTransactions", Model.CustomerTransactions)
+                @Html.Partial("_CustomerTransactions", Model)
             </div>
         </div>
     </div>

@@ -8,7 +8,7 @@
 
 
 
-        @using (Html.BeginForm("Signup", "Home", FormMethod.Post))
+        @using (Html.BeginForm("Signup", "Account", FormMethod.Post))
         {
             <div style=" color: red; float: left">
                 @TempData["ErrorMessage"]
@@ -62,7 +62,7 @@
             </div>
             <p class="text-center mt-3">
                 Already have an account ?
-                <span class="text-primary"> <a href="@Url.Action("index", "Home")">Login </a></span>
+                <span class="text-primary"> <a href="@Url.Action("Login", "Account")">Login </a></span>
             </p>
             <input name="__RequestVerificationToken" type="hidden" value="CfDJ8M8wAShN7vdBhBTP5SMOrpHC_Bz5suBd1ZeCO_3JZvDle-cIbDphMtekV2kaKEGSnfLrEjzV3bhg1X6xiOfLR4iDfTFeV26qLiI-pBOG1sVFG5Nrfl0PCCOO9v5tNKSv2IrOaqtRWqRAZBipRwLVurs">
         }

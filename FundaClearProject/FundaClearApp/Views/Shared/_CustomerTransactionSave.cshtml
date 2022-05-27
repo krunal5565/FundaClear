@@ -7,10 +7,20 @@
     <div class="modal-dialog" role="document">
         @using (Html.BeginForm("AddCustomerTransaction", "Customer", FormMethod.Post))
         {
+            @Html.HiddenFor(m => m.IsAddPoint)
             @Html.HiddenFor(m => m.CustId)
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Add Customer Transaction</h4>
+
+                    @if (Model.IsAddPoint)
+                    {
+                        <h4 class="modal-title w-100 font-weight-bold">Add Customer Transaction</h4>
+                    }
+                    else
+                    {
+                        <h4 class="modal-title w-100 font-weight-bold">Add Customer Redemption</h4>
+                    }
+
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -18,7 +28,7 @@
                 <div class="modal-body mx-3">
                     <div class="md-form mb-5">
                         <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>
-                        @Html.EditorFor(model => model.BillDate, new { htmlAttributes = new { @title = "", @class = "form-control" } })
+                        @Html.EditorFor(model => model.BillDate, new { @format = "DD-MM-YYYY", @id = "billDateTxt", htmlAttributes = new { @title = "", @class = "form-control" } })
                     </div>
                     <div class="md-form mb-5">
                         <label data-error="wrong" data-success="right" for="form3">Bill Amount</label>

@@ -9,6 +9,7 @@ namespace FundaClearApp.Models
     public class CustomerModel
     {
         public List<CustomerTransactionDTO> CustomerTransactions { get; set; }
+        public bool IsAddPoints { get; set; }
         public CustomerDTO Customer { get; set; }
         public CustomerTransactionDTO CustomerTransaction { get; set; }
     }

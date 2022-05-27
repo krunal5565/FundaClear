@@ -8,12 +8,12 @@
     <h2>Customers</h2>
     <hr />
     <div style="width:100%; height:30px">
-        <a href="@Url.Action("Add", "Customer")" style="float:right;  background-color: #2e4b90;" class="btn btn-primary btn-sm active" role="button">
+        <a href="@Url.Action("Add", "Customer")" style="float:right; color:white; background-color: #2e4b90;" class="btn btn-primary btn-sm active" role="button">
             + Add New Customer
         </a>
     </div>
     <hr />
-    <div>
+    <div style="width: 100%; overflow-x: auto; ">
         <table class="table table-bordered">
             <thead>
                 <tr>
@@ -35,18 +35,25 @@
                         <td>@item.Address</td>
                         <td>@item.BalancePoint</td>
                         <td>
-                            <span style="border:1px solid black; border-radius:4px; padding:5px;">
+                            <span style="margin-top: 2px; ">
                                 <a id="btnEdit" class="fa fa-edit" style="color:blue" href="/customer/edit?id=@item.CustomerId"></a>
 
                             </span>
                             &nbsp;
-                            <span style="border:1px solid black; border-radius:4px; padding:5px;">
+                            <span style="margin-top: 2px; ">
                                 <a class="fa fa-trash" style="color:red" href="javascript:void(0)" onclick="DeleteCustomer('@item.CustomerId')" id="btnDelete"></a>
                             </span>
                             &nbsp;
-                            <span style="border:1px solid black; border-radius:4px; padding:5px;color:purple">
-                                <a id="btnTransactions" href="/customer/CustomerTransactions?id=@item.CustomerId">
-                                    <i class="fa fa-plus"> &nbsp;<i class="fa fa-rupee"></i>&nbsp;<i class="fa fa-minus"></i></i>
+                            <span style="margin-top:2px; border: 1px solid #808080; border-radius: 4px; padding: 1px; color: purple">
+                                <a id="btnTransactionsRedemption" href="/customer/CustomerTransactions?id=@item.CustomerId">
+                                    <i class="fa fa-plus"> &nbsp;<i class="fa fa-rupee"></i></i>
+                                </a>
+                            </span>
+                            &nbsp;
+                            &nbsp;
+                            <span style="margin-top: 2px; border: 1px solid #808080; border-radius: 4px; padding: 1px; color: purple">
+                                <a id="btnTransactions" href="/customer/RedemptionTransactions?id=@item.CustomerId">
+                                    <i class="fa fa-minus"> &nbsp;<i class="fa fa-rupee"></i></i>
                                 </a>
                             </span>
                         </td>

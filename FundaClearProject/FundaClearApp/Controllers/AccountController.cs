@@ -3,30 +3,37 @@ using FundaClearApp.Models;
 using FundaClearApp.Utilities;
 using Loyalty.DTO;
 using Loyalty.ServiceLibrary;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FundaClearApp.Controllers
 {
-    public class HomeController : Controller
+    public class AccountController : Controller
     {
         public string connectionString;
 
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<AccountController> _logger;
+        private readonly IConfiguration configuration;
 
-        public HomeController(ILogger<HomeController> logger)
+        public AccountController(ILogger<AccountController> logger, IConfiguration iConfiguration)
         {
             _logger = logger;
-            connectionString = ConnectionHelper.GetConnectionString();
+            connectionString = iConfiguration.GetConnectionString("DefaultConnection");// ConnectionHelper.GetConnectionString();
+            configuration = iConfiguration;
         }
 
-        public IActionResult Index()
+        public IActionResult Login()
         {
             return View();
         }
@@ -34,10 +41,14 @@ namespace FundaClearApp.Controllers
         public IActionResult Logout()
         {
             HttpContext.Session = null;
-            return RedirectToAction("Index");
+
+            var login = HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+
+            return RedirectToAction("Login");
         }
 
-
+        //[Authorize]
         public IActionResult Dashboard()
         {
             return View();
@@ -54,12 +65,25 @@ namespace FundaClearApp.Controllers
 
                 if (objResponseDTO.Status)
                 {
+                    //Create the identity for the user  
+                    //var identity = new ClaimsIdentity(new[] { new Claim(ClaimTypes.Name, model.LoginId) },
+                    //    CookieAuthenticationDefaults.AuthenticationScheme);
+
+                   var identity = new ClaimsIdentity(new[] {
+                    new Claim(ClaimTypes.Name, model.LoginId),
+                }, CookieAuthenticationDefaults.AuthenticationScheme);
+
+
+                    var principal = new ClaimsPrincipal(identity);
+
+                    var login = HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
                     TenantDTO objTenantDTO = objResponseDTO.Data as TenantDTO;
 
                     HttpContext.Session.SetString("TenantId", objTenantDTO.TenantId);
                     HttpContext.Session.SetString("TenantName", objTenantDTO.TenantName);
 
-                    return Redirect("Dashboard");
+                    return RedirectToAction("Dashboard", "Account");
                 }
                 else
                 {
@@ -71,7 +95,7 @@ namespace FundaClearApp.Controllers
                 TempData[Constants.KeyErrorMessage] = Constants.ErrorEnterUsernamePassword;
             }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         public ActionResult Signup()
@@ -101,7 +125,7 @@ namespace FundaClearApp.Controllers
                     {
                         TempData[Constants.KeySuccessMessage] = Constants.SuccessSignup;
                         model = new TenantDTO();
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Login", "Account");
                     }
                     else
                     {
